@@ -16,6 +16,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        //Setup initial view controller
+        self.window = UIWindow(frame: UIScreen.main.bounds)
+        let profileVC = ProfileViewController.instantiateViewController()
+        self.window?.rootViewController = profileVC
+        self.window?.makeKeyAndVisible()
+        
         return true
     }
 
